@@ -10,5 +10,5 @@ int solve_student(int n) {
         }
         n = sum;
     }
-    return (n == 1) ? 1 : 0;
+    return n == 1;
 }

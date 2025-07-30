@@ -1,16 +1,15 @@
 int solve_student(int n) {
+  int x = n;
+  int y = n;
+  while (y != 1 && y != 4) {
     int sum = 0;
-    int num = n;
-    while (num > 0) {
-        int digit = num % 10;
-        sum += digit * digit;
-        num /= 10;
+    while (x > 0) {
+      int digit = x % 10;
+      sum += digit * digit;
+      x /= 10;
     }
-    if (sum == 1) {
-        return 1;
-    } else if (sum == 4) {
-        return 0;
-    } else {
-        return solve_student(sum);
-    }
+    x = sum;
+    if (x == 1) return 1;
+  }
+  return (x == 1);
 }

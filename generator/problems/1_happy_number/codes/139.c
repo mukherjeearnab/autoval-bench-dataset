@@ -1,15 +1,20 @@
-int solve_student(int n) {
-  int temp;
-  int seen[10000] = {0};
-  while (n != 1 && seen[n] == 0) {
-    seen[n] = 1;
-    temp = 0;
-    while (n > 0) {
-      int digit = n % 10;
-      temp += digit * digit;
-      n /= 10;
-    }
-    n = temp;
+int sum_sq(int n) {
+  int s = 0;
+  while (n) {
+    int d = n % 10;
+    s += d * d;
+    n /= 10;
   }
-  return n == 1;
+  return s;
+}
+
+int solve_student(int n) {
+  int a = n;
+  int b = n;
+  while (a != 1 && b != 1) {
+    a = sum_sq(a);
+    b = sum_sq(sum_sq(b));
+    if (a == b) break;
+  }
+  return a == 1;
 }

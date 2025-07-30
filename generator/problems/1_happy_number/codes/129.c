@@ -1,13 +1,15 @@
 int solve_student(int n) {
-  int a = 0;
-  while(n != 1 && n != 0) {
-    while(n > 0) {
-      int b = n % 10;
-      a += b * b;
-      n /= 10;
+  int sum = 0;
+  while (n != 1 && n > 0) {
+    while (n > 0) {
+      int digit = n % 10;
+      sum = sum + digit * digit;
+      n = n / 10;
     }
-    n = a;
-    a = 0;
+    n = sum;
+    if (n == 1) break;
+    if (n == 0) return 0;
   }
-  return n == 1;
+  if (n == 1) return 1;
+  return 0;
 }

@@ -1,5 +1,6 @@
 int solve_student(int n) {
-    int seen[1000] = {0};
+    if (n <= 0) return 0;
+    int seen[100000] = {0};
     while (n != 1 && seen[n] == 0) {
         seen[n] = 1;
         int sum = 0;
@@ -10,5 +11,5 @@ int solve_student(int n) {
         }
         n = sum;
     }
-    return (n == 1) ? 1 : 0;
+    return (n == 1);
 }

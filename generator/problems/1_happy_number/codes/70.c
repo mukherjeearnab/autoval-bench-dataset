@@ -1,10 +1,20 @@
-int solve_student(int n) {
+int sum_of_squares(int num) {
     int sum = 0;
-    while (n > 0) {
-        int digit = n % 10;
+    while (num > 0) {
+        int digit = num % 10;
         sum += digit * digit;
-        n /= 10;
+        num /= 10;
     }
-    if (sum == 1) return 1;
-    if (sum == 4) return 0;
-    return solve_student(sum);
+    return sum;
+}
+
+int solve_student(int n) {
+    if (n <= 0) return 0;
+    int slow = n;
+    int fast = n;
+    do {
+        slow = sum_of_squares(slow);
+        fast = sum_of_squares(sum_of_squares(fast));
+    } while (slow != fast);
+    return slow == 1;
+}

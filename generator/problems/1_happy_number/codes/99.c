@@ -1,6 +1,6 @@
 int solve_student(int n) {
-  int num = n;
-  while (num != 1 && num != 4) {
+  int a = n;
+  while (a != 1 && a != 4) {
     int sum = 0;
     while (n > 0) {
       int digit = n % 10;
@@ -8,7 +8,7 @@ int solve_student(int n) {
       n /= 10;
     }
     n = sum;
+    if (n == 4) return 0;
   }
-  if (n == 1) return 1;
-  else return 0;
+  return n == 1;
 }

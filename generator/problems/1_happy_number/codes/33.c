@@ -1,14 +1,16 @@
 int solve_student(int n) {
-  int sum_sq = 0;
-  while (n != 1 && n > 0) {
+  if (n <= 0) return 0;
+  int s = 0;
+  while (n != 1 && s < 1000) {
     int temp = n;
+    int sum = 0;
     while (temp > 0) {
       int digit = temp % 10;
-      sum_sq += digit * digit;
+      sum += digit * digit;
       temp /= 10;
     }
-    n = sum_sq;
-    sum_sq = 0;
+    n = sum;
+    s++;
   }
-  if (n == 1) return 1; else return 0;
+  return n == 1;
 }

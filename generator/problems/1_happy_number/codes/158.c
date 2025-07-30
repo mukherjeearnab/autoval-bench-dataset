@@ -1,19 +1,15 @@
 int solve_student(int n) {
-    int a = 0;
-    while (n != 1 && a < 1000) {
-        int temp = n;
+    if (n <= 0) return 0;
+    int temp = n;
+    while (temp != 1 && temp != 4) {
         int sum = 0;
-        while (temp > 0) {
-            int digit = temp % 10;
+        while (n > 0) {
+            int digit = n % 10;
             sum += digit * digit;
-            temp /= 10;
+            n /= 10;
         }
         n = sum;
-        a++;
+        temp = n;
     }
-    if (n == 1) {
-        return 1;
-    } else {
-        return 0;
-    }
+    return temp == 1;
 }

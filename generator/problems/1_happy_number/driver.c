@@ -4,6 +4,7 @@
  */
 // @IncludeLibs_Start
 #include <assert.h>
+#include <klee/klee.h>
 #include <stdlib.h>
 // @IncludeLibs_End
 
@@ -42,8 +43,9 @@ int main() {
      * This section is used to assert the Pre-conditions for the input space.
      */
     // @CheckPreConditions_Start
-    if (n < 1) exit(EXIT_FAILURE);
-    if (n > 5) exit(EXIT_FAILURE);
+    // if (n < 1) exit(EXIT_FAILURE);
+    // if (n > 10) exit(EXIT_FAILURE);
+    klee_assume(n > 0 && n <= 10);
     // @CheckPreConditions_End
 
     /** CallMethods
@@ -60,7 +62,7 @@ int main() {
      * This section is used to assert the simmilarities of the outputs of the master and student methods.
      */
     // @CheckAssertions_Start
-    assert(return_value_1 == return_value_2);
+    klee_assert(return_value_1 == return_value_2);
     // @CheckAssertions_End
 
     return 0;

@@ -1,18 +1,22 @@
+int digitSquareSum(int num) {
+  int sum = 0;
+  while (num > 0) {
+    int digit = num % 10;
+    sum += digit * digit;
+    num /= 10;
+  }
+  return sum;
+}
+
 int solve_student(int n) {
-  int x = n;
-  while (x != 1 && x < 10000) {
-    int sum = 0;
-    while (n > 0) {
-      int digit = n % 10;
-      sum += digit * digit;
-      n /= 10;
-    }
-    n = sum;
-    x = n;
-  }
-  if(n == 1){
-    return 1;
-  } else {
-    return 0;
-  }
+  if (n <= 0) return 0;
+  int slow = n;
+  int fast = n;
+
+  do {
+    slow = digitSquareSum(slow);
+    fast = digitSquareSum(digitSquareSum(fast));
+  } while (slow != fast);
+
+  return slow == 1;
 }

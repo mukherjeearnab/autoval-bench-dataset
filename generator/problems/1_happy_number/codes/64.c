@@ -1,15 +1,32 @@
-int solve_student(int n) {
-  int num = n;
-  int result = 0;
-  while (num != 1 && result < 1000) {
-    result++;
+int digitSquareSum(int num) {
     int sum = 0;
-    while (n > 0) {
-      int digit = n % 10;
-      sum += digit * digit;
-      n /= 10;
+    while (num > 0) {
+        int digit = num % 10;
+        sum += digit * digit;
+        num /= 10;
     }
-    n = sum;
-  }
-  return (n == 1);
+    return sum;
+}
+
+int solve_student(int n) {
+    int a = n;
+    int b = n;
+    do {
+        int sum = 0;
+        while (a > 0) {
+            int digit = a % 10;
+            sum += digit * digit;
+            a /= 10;
+        }
+        a = sum;
+        sum = 0;
+        while (b > 0) {
+            int digit = b % 10;
+            sum += digit * digit;
+            b /= 10;
+        }
+        b = sum;
+        b = digitSquareSum(b);
+    } while (a != b);
+    return a == 1;
 }

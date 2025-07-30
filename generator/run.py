@@ -1,3 +1,4 @@
+import re
 import os
 import json
 import ollama
@@ -45,6 +46,7 @@ Instructions:
 2. Simulate different skill levels (e.g., beginner, intermediate, advanced).
 3. Don't include any comments.
 4. Do not write anything outside the code block.
+5. Write the solve_student() function in the last, to help avoid compilation errors.
 
 Input Format:
 - Problem Statement
@@ -81,6 +83,42 @@ client = ollama.Client(
 )
 
 
+def move_c_function_to_end(code):
+    func_name = 'solve_student'
+
+    # Pattern to match function definition (not just prototype)
+    pattern = rf'\b[\w\s\*\(\)]+\b{re.escape(func_name)}\s*\([^;]*?\)\s*\{{'
+
+    match = re.search(pattern, code)
+    if not match:
+        print(f"Function {func_name} not found.")
+        return
+
+    start = match.start()
+
+    # Use brace counting to find the full function body
+    i = match.end() - 1  # position at the opening {
+    brace_count = 1
+    while i < len(code) - 1 and brace_count > 0:
+        i += 1
+        if code[i] == '{':
+            brace_count += 1
+        elif code[i] == '}':
+            brace_count -= 1
+
+    end = i + 1  # include the closing }
+
+    func_body = code[start:end]
+    code_before = code[:start]
+    code_after = code[end:]
+
+    # Reconstruct the file with the function moved to the end
+    new_code = code_before.strip() + '\n\n' + code_after.strip() + \
+        '\n\n' + func_body + '\n'
+
+    return new_code
+
+
 for TRIAL in range(33):
     print('RUNNING TRIAL', TRIAL)
     response = client.chat(
@@ -102,6 +140,8 @@ for TRIAL in range(33):
 
     os.makedirs(f'./problems/{problem}/codes/', exist_ok=True)
     for code in obj:
+        code: str = move_c_function_to_end(code)
+        code = code.strip()
         with open(f'./problems/{problem}/codes/{starting_index}.c', 'w') as f:
             f.write(code)
 

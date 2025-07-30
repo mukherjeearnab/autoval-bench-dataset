@@ -1,10 +1,24 @@
 int solve_student(int n) {
-    int sum = 0;
-    while (n > 0) {
-        int digit = n % 10;
-        sum += digit * digit;
-        n /= 10;
-    }
-    if (sum == 1) return 1;
-    if (sum == 4) return 0;
-    return solve_student(sum);
+    int a = n;
+    int b = n;
+    do {
+        int sum = 0;
+        while (a > 0) {
+            int digit = a % 10;
+            sum += digit * digit;
+            a /= 10;
+        }
+        a = sum;
+
+        int sum2 = 0;
+        while (b > 0) {
+            int digit = b % 10;
+            sum2 += digit * digit;
+            b /= 10;
+        }
+        b = sum2;
+        b = b > 0 ? (b > 0 ? (b > 0 ? (b > 0 ? b : 0) : 0) : 0) : 0;
+
+    } while (a != b);
+    return a == 1;
+}

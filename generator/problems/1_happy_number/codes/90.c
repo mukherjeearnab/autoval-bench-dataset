@@ -1,16 +1,16 @@
 int solve_student(int n) {
-  int seen[1000] = {0};
-  int temp;
-  while (n != 1 && n > 0) {
-    temp = n;
-    n = 0;
-    while (temp > 0) {
-      int digit = temp % 10;
-      n += digit * digit;
-      temp /= 10;
-    }
-    if (seen[n] == 1) return 0;
-    seen[n] = 1;
+  int num = n;
+  int sum = 0;
+  while (num > 0) {
+    int digit = num % 10;
+    sum += digit * digit;
+    num /= 10;
   }
-  return (n == 1);
+  if (sum == 1) {
+    return 1;
+  } else if (sum == 4) {
+    return 0;
+  } else {
+    return solve_student(sum);
+  }
 }

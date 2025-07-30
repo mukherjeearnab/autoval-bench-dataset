@@ -1,18 +1,22 @@
-int solve_student(int n) {
-  if (n <= 0) return 0;
-  int seen[1001];
-  for (int i = 0; i < 1001; i++) {
-    seen[i] = 0;
+int sum_of_squares(int num) {
+  int sum = 0;
+  while (num > 0) {
+    int digit = num % 10;
+    sum += digit * digit;
+    num /= 10;
   }
-  while (n != 1 && seen[n] == 0) {
-    seen[n] = 1;
-    int temp = n;
-    n = 0;
-    while (temp > 0) {
-      int digit = temp % 10;
-      n += digit * digit;
-      temp /= 10;
+  return sum;
+}
+
+int solve_student(int n) {
+  int a = n;
+  int b = n;
+  while (a != 1 && b != 1) {
+    a = sum_of_squares(a);
+    b = sum_of_squares(sum_of_squares(b));
+    if (a == b) {
+      return 0;
     }
   }
-  return n == 1;
+  return (a == 1 || b == 1);
 }

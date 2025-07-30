@@ -1,17 +1,15 @@
 int solve_student(int n) {
-  int num = n;
-  int sum = 0;
-  int count = 0;
-  while (num != 1 && count < 1000) {
-    while (num > 0) {
-      int digit = num % 10;
+  if (n <= 0) return 0;
+  int seen[1000] = {0};
+  while (n != 1 && !seen[n]) {
+    seen[n] = 1;
+    int sum = 0;
+    while (n > 0) {
+      int digit = n % 10;
       sum += digit * digit;
-      num /= 10;
+      n /= 10;
     }
-    num = sum;
-    sum = 0;
-    count++;
+    n = sum;
   }
-  if(count == 1000) return 0;
-  return num == 1;
+  return n == 1;
 }

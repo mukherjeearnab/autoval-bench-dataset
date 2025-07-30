@@ -1,21 +1,21 @@
+int sum_of_squares(int n) {
+  int sum = 0;
+  while (n > 0) {
+    int digit = n % 10;
+    sum += digit * digit;
+    n /= 10;
+  }
+  return sum;
+}
+
 int solve_student(int n) {
   int slow = n;
   int fast = n;
 
   do {
-    slow = digit_square_sum(slow);
-    fast = digit_square_sum(digit_square_sum(fast));
+    slow = sum_of_squares(slow);
+    fast = sum_of_squares(sum_of_squares(fast));
   } while (slow != fast);
 
   return (slow == 1);
-}
-
-int digit_square_sum(int num) {
-  int sum = 0;
-  while (num > 0) {
-    int digit = num % 10;
-    sum += digit * digit;
-    num /= 10;
-  }
-  return sum;
 }

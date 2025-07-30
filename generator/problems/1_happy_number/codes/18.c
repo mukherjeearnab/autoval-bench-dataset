@@ -8,10 +8,10 @@ int solve_student(int n) {
         }
         if (sum == 1) {
             return 1;
-        } else if (sum == 0) {
+        } else if (sum == 4) {
             return 0;
         }
         n = sum;
     }
-    return (n == 1);
+    return n == 1;
 }

@@ -1,18 +1,13 @@
 int solve_student(int n) {
-  int seen[1000];
-  int i = 0;
-  while (n != 1 && n != 4) {
-    seen[i++] = n;
-    int sum = 0;
-    while (n > 0) {
-      int digit = n % 10;
-      sum += digit * digit;
-      n /= 10;
+  int a = n;
+  while (a != 1 && a > 0) {
+    int b = 0;
+    while (a > 0) {
+      int digit = a % 10;
+      b += digit * digit;
+      a /= 10;
     }
-    n = sum;
-    for (int j = 0; j < i; j++) {
-      if (seen[j] == n) return 0;
-    }
+    a = b;
   }
-  return n == 1;
+  if (a == 1) return 1; else return 0;
 }
