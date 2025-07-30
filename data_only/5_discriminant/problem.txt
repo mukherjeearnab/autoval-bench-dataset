@@ -1,0 +1,1 @@
+Given a, b, c of a quadratic equation, return the discriminant.

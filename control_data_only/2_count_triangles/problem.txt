@@ -1,0 +1,11 @@
+Given a positive integer N≥1, count how many distinct triangles can be formed using positive integers a,b,c such that:
+
+1≤c≤b≤a≤N
+
+The values a,b,ca,b,c can form a valid triangle, i.e., they satisfy the triangle inequality:
+
+    a+b>c
+    b+c>a
+    c+a>b
+
+Return the number of such distinct triangles.

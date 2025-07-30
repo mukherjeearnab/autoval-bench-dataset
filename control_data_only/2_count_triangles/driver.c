@@ -44,8 +44,8 @@ int main() {
      * if (input_variable [relational_operator] constant) exit(EXIT_FAILURE);
      */
     // @CheckPreConditions_Start
-    if (N <= 3) exit(EXIT_FAILURE);
-    if (N > 8) exit(EXIT_FAILURE);
+    if (N <= 0) exit(EXIT_FAILURE);
+    if (N > 48) exit(EXIT_FAILURE);
     // @CheckPreConditions_End
 
     /** CallMethods

@@ -1,0 +1,11 @@
+int solve_student(int n) {
+  long long res = 0;
+  while (n != 0) {
+    res = res * 10 + n % 10;
+    n = n / 10;
+  }
+  if (res > 2147483647 || res < -2147483648) {
+    return 0;
+  }
+  return (int)res;
+}

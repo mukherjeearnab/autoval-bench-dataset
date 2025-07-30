@@ -1,0 +1,15 @@
+int solve_student(int n) {
+  int reversed = 0;
+  int sign = 1;
+  if (n < 0) {
+    sign = -1;
+    n = -n;
+  }
+  while (n > 0) {
+    int digit = n % 10;
+    if (reversed > INT_MAX / 10 || (reversed == INT_MAX / 10 && digit > 7)) return 0;
+    reversed = reversed * 10 + digit;
+    n /= 10;
+  }
+  return sign * reversed;
+}
