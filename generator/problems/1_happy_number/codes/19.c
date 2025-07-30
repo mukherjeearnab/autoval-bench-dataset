@@ -1,0 +1,17 @@
+int solve_student(int n) {
+    int temp;
+    while(n != 1 && n > 0){
+        temp = 0;
+        while(n > 0){
+            int digit = n % 10;
+            temp += digit * digit;
+            n /= 10;
+        }
+        n = temp;
+    }
+    if(n == 1){
+        return 1;
+    } else {
+        return 0;
+    }
+}

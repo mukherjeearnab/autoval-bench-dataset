@@ -1,0 +1,15 @@
+int solve_student(int n) {
+  int a = n;
+  while (a != 1 && a < 1000) {
+    int sum = 0;
+    while (n > 0) {
+      int digit = n % 10;
+      sum += digit * digit;
+      n /= 10;
+    }
+    n = sum;
+    if(n == a) return 0;
+    a = n;
+  }
+  return (n == 1);
+}

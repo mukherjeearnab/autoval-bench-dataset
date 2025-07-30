@@ -2,9 +2,9 @@ import os
 import json
 import ollama
 
-problem = '2_reverse_number'
-correctness_type = 'semantically incorrect'
-starting_index = 226
+problem = '1_happy_number'
+correctness_type = 'correct'
+starting_index = 1
 
 with open(f'./problems/{problem}/problem.txt', 'r') as f:
     problem_stmt = f.read()
@@ -23,14 +23,7 @@ with open(f'./problems/{problem}/problem.txt', 'r') as f:
     10. Confusing Syntax from Other Languages
 '''
 
-prompt = f"""
-You are a programming tutor generating example student submissions in the C programming language. Given a problem statement and a function template, you will generate realistic student solutions, which may vary in style, but needs to be {correctness_type} answers.
-
-Instructions:
-1. Use only the standard C library (no external dependencies), and include all required header files.
-2. Simulate different skill levels (e.g., beginner, intermediate, advanced).
-3. Don't include any comments.
-4. Do not write anything outside the code block.
+'''
 5. [IMPORTANT] the example submissions MUST contain SERIOUS semantic errors. Errors include, but not limited to:
     1. Using the wrong variable in expressions
     2. Logic inside if, while, etc., does not reflect intended behavior
@@ -41,6 +34,17 @@ Instructions:
     7. The code structure looks fine but doesn't solve the problem
     8. Using a local variable when a global one was intended
     9. Implicit type conversions lead to unexpected results
+
+'''
+
+prompt = f"""
+You are a programming tutor generating example student submissions in the C programming language. Given a problem statement and a function template, you will generate realistic student solutions, which may vary in style, but needs to be {correctness_type} answers.
+
+Instructions:
+1. Use only the standard C library (no external dependencies), and include all required header files.
+2. Simulate different skill levels (e.g., beginner, intermediate, advanced).
+3. Don't include any comments.
+4. Do not write anything outside the code block.
 
 Input Format:
 - Problem Statement
@@ -77,7 +81,7 @@ client = ollama.Client(
 )
 
 
-for TRIAL in range(8):
+for TRIAL in range(33):
     print('RUNNING TRIAL', TRIAL)
     response = client.chat(
         model='gemma3:27b',  # or 'deepseek-coder:6.7b', etc.
@@ -85,7 +89,7 @@ for TRIAL in range(8):
             {'role': 'user', 'content': prompt}
         ],
         options={
-            'temperature': 0.9
+            'temperature': 0.7
         }
     )
 
@@ -98,7 +102,7 @@ for TRIAL in range(8):
 
     os.makedirs(f'./problems/{problem}/codes/', exist_ok=True)
     for code in obj:
-        with open(f'./problems/{problem}/codes/{starting_index}-{correctness_type}.c', 'w') as f:
+        with open(f'./problems/{problem}/codes/{starting_index}.c', 'w') as f:
             f.write(code)
 
         starting_index += 1
