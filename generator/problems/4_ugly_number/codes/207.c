@@ -1,0 +1,13 @@
+int solve_student(int n) {
+  if (n < 0) return 0;
+  int i = 2;
+  while (i <= n) {
+    if (n % i == 0) {
+      if (i != 2 && i != 3 && i != 5) return 0;
+      n /= i;
+    } else {
+      i++;
+    }
+  }
+  return 1;
+}
