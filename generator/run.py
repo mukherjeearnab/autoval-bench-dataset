@@ -3,9 +3,12 @@ import os
 import json
 import ollama
 
-input_params = 'int n'
-return_type = 'int'
-problem = '4_ugly_number'
+# change these
+input_params = 'int *arr, int n'
+return_type = 'void'
+problem = '5_sort_an_array'
+###############
+
 correctness_types = ['correct',
                      'syntactically incorrect', 'semantically incorrect']
 starting_index = 1

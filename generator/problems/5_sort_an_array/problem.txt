@@ -1,4 +1,4 @@
-Given an array of integers nums, sort the array in ascending order and return it.
+Given an array of integers nums, sort the array inplace in ascending order.
 
 You must solve the problem using the bubble sort approach, without using any built-in functions in O(nlog(n)) time complexity and with the smallest space complexity possible.
 
