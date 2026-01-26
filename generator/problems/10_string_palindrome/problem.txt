@@ -1,0 +1,10 @@
+Problem:
+Write a program that reads a string (no spaces) and checks whether it is a palindrome.
+
+A string is a palindrome if it reads the same forwards and backwards.
+
+Input:
+A string of at most 100 characters, containing no spaces.
+
+Output:
+Return 1 if the string is a palindrome, otherwise return 0.

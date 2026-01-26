@@ -1,0 +1,13 @@
+Problem:
+Write a program that reads three real numbers a, b, and c representing a quadratic equation
+
+ax^2+bx+c=0
+
+Compute and print the discriminant and the real roots, if they exist.
+
+Input:
+Three integer-point numbers a, b, and c.
+
+Output:
+
+return the discriminant: D = b*b - 4*a*c

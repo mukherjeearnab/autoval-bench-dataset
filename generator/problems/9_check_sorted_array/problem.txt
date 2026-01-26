@@ -1,0 +1,11 @@
+Problem:
+Read an integer n and an array of n integers. Return 1 if the array is sorted in non-decreasing order, otherwise return 0.
+
+Input:
+
+Integer n
+
+n integers
+
+Output:
+Yes = 1 or No = 0.

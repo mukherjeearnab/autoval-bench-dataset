@@ -1,0 +1,11 @@
+Problem:
+Read an integer n and an array of n integers. Return the smallest element.
+
+Input:
+
+Integer n
+
+n integers
+
+Output:
+The minimum value.

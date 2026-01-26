@@ -1,0 +1,9 @@
+Problem:
+Read an integer n. Return 1 if n is even, otherwise 0.
+
+Input:
+One integer n.
+
+Output:
+1 = EVEN, 0 = ODD.
+

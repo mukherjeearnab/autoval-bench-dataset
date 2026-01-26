@@ -4,9 +4,9 @@ import json
 import ollama
 
 # change these
-input_params = 'int *arr, int n'
-return_type = 'void'
-problem = '5_sort_an_array'
+input_params = 'char *arr, int len'
+return_type = 'int'
+problem = '8_longest_substring'
 ###############
 
 correctness_types = ['correct',

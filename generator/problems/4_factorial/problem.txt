@@ -1,0 +1,8 @@
+Problem:
+Read a non-negative integer n and return n!.
+
+Input:
+One integer n (0 ≤ n ≤ 12).
+
+Output:
+The factorial of n.

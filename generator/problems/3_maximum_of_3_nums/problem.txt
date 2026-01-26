@@ -1,0 +1,8 @@
+Problem:
+Read three integers and return the largest one.
+
+Input:
+Three integers a, b, and c.
+
+Output:
+The maximum value.

@@ -1,0 +1,11 @@
+Problem:
+Read an integer n, then read n integers into an array. Count how many of them are positive.
+
+Input:
+
+Integer n
+
+n integers
+
+Output:
+Number of positive elements.

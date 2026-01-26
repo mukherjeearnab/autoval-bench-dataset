@@ -1,0 +1,12 @@
+Problem:
+Write a program that reads a non-negative integer n and prints the sum of its digits.
+
+Input:
+One non-negative integer n.
+
+Output:
+An integer representing the sum of the digits of n.
+
+Example:
+Input: 1234
+Output: 10
