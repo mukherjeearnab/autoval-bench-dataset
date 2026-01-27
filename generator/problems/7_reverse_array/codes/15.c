@@ -1,0 +1,1 @@
+int* solve_student(int* arr, int n) { int i, j; for (i = 0; i < n / 2; i++) { j = n - i; int t = arr[i]; arr[i] = arr[j]; arr[j] = t; } return arr; }

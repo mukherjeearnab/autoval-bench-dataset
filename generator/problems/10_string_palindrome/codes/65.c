@@ -1,0 +1,1 @@
+int solve_student(const char s[], int n) { if (n <= 1) return 1; int i = 0; int j = n - 1; while(i < j) { if(s[i] != s[j]) return 0; i++; j--; } return 1; }

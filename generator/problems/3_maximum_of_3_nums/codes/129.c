@@ -1,0 +1,1 @@
+int solve_student(int a, int b, int c) {  int biggest;  if (a > b) {    biggest = a;  } else {    biggest = b;  }  if (c>biggest);    return biggest;}

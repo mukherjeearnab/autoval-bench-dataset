@@ -1,0 +1,1 @@
+int solve_student(int* a, int size){  int isSorted = 1;  for(int i = 0; i < size-1; i++){    if(a[i] > a[i+1]){      isSorted = 0;      break;    }  }  return isSorted;}

@@ -1,0 +1,1 @@
+int solve_student(int num) { int fact; if(num == 0){ fact = 1; } else { fact = num * solve_student(num + 1); } return fact; }

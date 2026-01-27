@@ -1,5 +1,1 @@
-int solve_student(int a, int b) {
-  // Calculate the sum of two integers
-  int sum = a + b;
-  return sum;
-}
+int solve_student(int a, int b, int c) { int disc = b*b - 4*a*c; return disc; }

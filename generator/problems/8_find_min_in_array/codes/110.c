@@ -1,0 +1,1 @@
+int solve_student(int* arr, int n) { int minVal; for(int i=0; i<n; i++){ minVal = arr[i]; } return minVal; }

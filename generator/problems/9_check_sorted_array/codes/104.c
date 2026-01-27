@@ -1,0 +1,11 @@
+int solve_student(int* arr, int n) {
+  int isSorted = 1;
+  if (n <= 0) return 1;
+  for (int i = 0; i < n - 1; ++i) {
+    if (arr[i] > arr[i+1]) {
+      isSorted = 0;
+      break;
+    }
+  }
+  return isSorted;
+}

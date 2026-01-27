@@ -1,0 +1,9 @@
+int solve_student(int num) {
+    int factorial;
+    if (num == 0) {
+        factorial = 1;
+    } else {
+        factorial = num * solve_student(num - 1);
+    }
+    return factorial;
+}

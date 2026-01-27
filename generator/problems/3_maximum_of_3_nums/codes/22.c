@@ -1,0 +1,1 @@
+int solve_student(int a, int b, int c){ //Finds the largest of three integers. int largest; if (a >= b && a >= c) largest = a; else if (b >= a && b >= c) largest = b; else largest = c; return largest;}

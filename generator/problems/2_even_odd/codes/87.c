@@ -1,0 +1,1 @@
+int solve_student(int num) { int r = num % 2; if(r==0) return 1; else return 0; }

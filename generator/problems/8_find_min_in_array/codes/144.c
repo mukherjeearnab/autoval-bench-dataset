@@ -1,0 +1,1 @@
+int solve_student(int* arr, int n) { int smallest = arr[0]; int j; for (j = 0; j < n - 1; j++) { if (arr[j] < smallest) smallest = arr[j]; } return smallest;}

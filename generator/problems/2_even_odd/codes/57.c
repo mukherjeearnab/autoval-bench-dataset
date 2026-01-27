@@ -1,0 +1,1 @@
+int solve_student(int num) { int res; res = (int)(num / 2.0); if (res * 2 == num) return 1; else return 0; }

@@ -1,0 +1,1 @@
+int solve_student(int a, int b, int c) { int mx; if(a>b) mx=a; else mx=b; if (mx<c) mx=c; return mx; }

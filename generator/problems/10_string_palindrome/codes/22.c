@@ -1,0 +1,12 @@
+int solve_student(const char s[], int n) {
+  int left = 0;
+  int right = n - 1;
+  while (left < right) {
+    if (s[left] != s[right]) {
+      return 0;
+    }
+    left++;
+    right--;
+  }
+  return 1;
+}

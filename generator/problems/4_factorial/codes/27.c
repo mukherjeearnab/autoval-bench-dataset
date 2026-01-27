@@ -1,0 +1,1 @@
+int solve_student(int num) { int fact = 1; int counter; for (counter = 1; counter <= num; counter++){ fact = fact * counter; } return fact; }

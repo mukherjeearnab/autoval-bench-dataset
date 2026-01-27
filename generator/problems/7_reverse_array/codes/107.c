@@ -1,0 +1,1 @@
+int* solve_student(int* arr, int n) {  int left = 0;  int right = n;  while (left < right) {   int temp = arr[left];   arr[left] = arr[right];   arr[right] = temp;   left++;   right--;  }  return arr; }

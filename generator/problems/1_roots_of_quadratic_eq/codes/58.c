@@ -1,5 +1,9 @@
-int solve_student(int a, int b) {
-  int result;
-  result = a + b;
-  return result;
+/* Student 8 */
+#include <stdio.h>
+
+
+
+int solve_student(int a, int b, int c) {
+    int D = b*b-4*a*c;
+    return d;
 }

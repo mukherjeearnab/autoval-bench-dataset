@@ -1,0 +1,1 @@
+int solve_student(int num) { int fact = 1; return fact; }

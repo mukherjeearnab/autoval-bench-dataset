@@ -1,0 +1,12 @@
+//Student 2: Simple iterative solution
+#include <stdio.h>
+
+
+
+int solve_student(int num) {
+  long long factorial = 1;
+  for (int i = 1; i <= num; ++i) {
+    factorial *= i;
+  }
+  return factorial;
+}

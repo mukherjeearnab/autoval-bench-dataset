@@ -1,8 +1,1 @@
-#include <stdio.h>
-
-
-
-int solve_student(int num1, int num2) {
-  int result = num1 + num2;
-  return result;
-}
+int solve_student(int a, int b, int c){ int D; D = b*b - 4*a*c; return D;}

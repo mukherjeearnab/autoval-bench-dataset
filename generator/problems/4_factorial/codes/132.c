@@ -1,0 +1,11 @@
+/* Student 2: Recursive implementation */
+
+
+
+int solve_student(int num) {
+  if (num == 0) {
+    return 1;
+  } else {
+    return num * solve_student(num - 1);
+  }
+}

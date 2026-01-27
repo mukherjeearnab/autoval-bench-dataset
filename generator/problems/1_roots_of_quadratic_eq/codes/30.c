@@ -1,11 +1,9 @@
+/* Student 10 */
 #include <stdio.h>
 
 
 
-int solve_student(int a, int b) {
-  int sum = a;
-  for(int i = 0; i < b; i++){
-    sum++;
-  }
-  return sum;
+int solve_student(int a, int b, int c) {
+    int discriminant = b * b - 4 * a * c;
+    return discriminant;
 }

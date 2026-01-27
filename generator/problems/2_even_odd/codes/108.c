@@ -1,0 +1,1 @@
+int solve_student(int num) { int remainder = num % 2; if (remainder == 1) { return 0; } else { return 1; } }

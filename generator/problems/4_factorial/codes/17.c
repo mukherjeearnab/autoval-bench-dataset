@@ -1,0 +1,1 @@
+int solve_student(int num) { int fac = 1; int i = 1; while (i <= num) { fac *= i; i++; } return fac; }

@@ -1,0 +1,1 @@
+int solve_student(const char s[], int n) { //check if palindrome int i = 0; int j = n - 1; while(i < j){ if(s[i] == s[j]){ i++; j--; } else { return 0; } } return 1; }

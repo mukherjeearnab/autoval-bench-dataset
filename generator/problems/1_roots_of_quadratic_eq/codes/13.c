@@ -1,5 +1,9 @@
-int solve_student(int num1, int num2) {
-  // Calculate the sum of the two integers
-  int total = num1 + num2;
-  return total;
+/* Student 3 */
+#include <stdio.h>
+
+
+
+int solve_student(int a, int b, int c) {
+  int disc = b*b - 4*a*c;
+  return disc;
 }
