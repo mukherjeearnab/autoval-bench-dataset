@@ -1,1 +1,1 @@
-int solve_student(const char s[], int n) {  // Check if string is palindrome  int left = 0;  int right = n - 1;  while (left < right) {   if (s[left] != s[right]) {    return 0;   }   left++;   right--;  }  return 1; }
+int solve_student(char *s, int len) { int i; for(i = 0; i < len / 2; i++) { if (s[i] != s[len - i - 1]) { return 0; } } return 1; }

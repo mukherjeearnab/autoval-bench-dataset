@@ -1,9 +1,1 @@
-int solve_student(const char s[], int n) {
-  int i;
-  for (i = 0; i < n; i++){
-    if (s[i] != s[n - i]) {
-      return 0;
-    }
-  }
-  return 1;
-}
+int solve_student(char* str, int length){ int i = 0; int j = length -1; while(i < j){ if(str[i] == str[j]){ i++; j--; } else return 0; } return 1;}

@@ -1,9 +1,13 @@
-int solve_student(const char s[], int n) {
-  int i;
-  for (i = 0; i <= n / 2; i++){
-    if(s[i] != s[n-i]){
-        return 0;
+int solve_student(char *s, int len) {
+  // Check if the string is a palindrome
+  int i = 0;
+  int j = len - 1;
+  while (i < j) {
+    if (s[i] != s[j]) {
+      return 0;
     }
+    i++;
+    j--;
   }
   return 1;
 }

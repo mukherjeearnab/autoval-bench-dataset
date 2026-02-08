@@ -2,4 +2,13 @@
 
 
 
-int solve_student(const char s[], int n) { int i; for (i = 0; i < n / 2; i++) { if (s[i] != s[n - i - 1]) return 0; } return 1; }
+int solve_student(char* str, int length) {
+  int i = 0;
+  while (i < length / 2) {
+    if (str[i] != str[length - 1 - i]) {
+      return 0;
+    }
+    i++;
+  }
+  return 1;
+}

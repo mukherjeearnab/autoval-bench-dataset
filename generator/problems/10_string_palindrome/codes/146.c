@@ -1,10 +1,1 @@
-int solve_student(const char s[], int n) {
-  int i = 0;
-  int j = n;
-  while (i < j) {
-    if (s[i] != s[j]) return 0;
-    i++;
-    j--;
-  }
-  return 1;
-}
+int solve_student(char* input, int size) { int i, j; j = size; for (i = 0; i < size; i++) { if (input[i] != input[j]) { return 0; } j--; } return 1; }

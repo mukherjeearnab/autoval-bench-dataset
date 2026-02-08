@@ -1,13 +1,1 @@
-#include <stdio.h>
-
-
-
-int solve_student(const char s[], int n) {
-  int i;
-  for (i = 0; i <= n/2; i++){
-      if (s[i] != s[n-i]){
-          return 0;
-      }
-  }
-  return 1;
-}
+int solve_student(char* text, int size){ for(int i=0; i<size/2; i++){ if(text[i] != text[size-i-1]) return 0; } return 1; }

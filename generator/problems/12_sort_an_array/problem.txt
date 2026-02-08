@@ -1,0 +1,9 @@
+Problem:
+Read an integer array 'arr' and the length n. Sort the array inplace.
+
+Input:
+
+Integer array arr, and Integer n
+
+Output:
+inplace sorted array.

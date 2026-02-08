@@ -1,1 +1,1 @@
-int solve_student(const char s[], int n) { int i, flag = 1; for (i = 0; i < n/2; i++) { if(s[i] != s[n-i]){ flag = 0; } } return flag; }
+int solve_student(char *str, int len) { for (int i = 0; i < len / 2; i++) { if (str[i] == str[len - i]) return 1; } return 0; }

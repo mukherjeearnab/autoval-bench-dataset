@@ -1,0 +1,9 @@
+Problem:
+Read an integer num. Return a new number, which is the reversed of the original num input.
+
+Input:
+
+Integer n
+
+Output:
+reversed integer of n.

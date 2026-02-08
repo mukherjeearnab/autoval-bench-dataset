@@ -1,1 +1,16 @@
-int solve_student(const char s[], int n) { int start = 0; int end = n - 1; while (start < end) { if (s[start] != s[end]) { return 0; } start++; end--; } return 1; }
+#include <stdio.h>
+#include <string.h>
+
+
+
+int solve_student(char* str, int len) {
+  int i, j;
+  j = len - 1;
+  for (i = 0; i < len / 2; i++){
+    if(str[i] != str[j]){
+      return 0;
+    }
+    j--;
+  }
+  return 1;
+}

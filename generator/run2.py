@@ -5,9 +5,13 @@ import ollama
 import traceback
 
 # change these
-problems = [  # '10_string_palindrome',     '2_even_odd', '4_factorial', '6_count_positive_in_array',
-    '8_find_min_in_array',
-    '1_roots_of_quadratic_eq', '3_maximum_of_3_nums', '5_sum_of_digits', '7_reverse_array', '9_check_sorted_array']
+problems = ['12_sort_an_array'
+            # '11_reverse_num'
+            # '10_string_palindrome'
+            # ,     '2_even_odd', '4_factorial', '6_count_positive_in_array',
+            # '8_find_min_in_array',
+            # '1_roots_of_quadratic_eq', '3_maximum_of_3_nums', '5_sum_of_digits', '7_reverse_array', '9_check_sorted_array'
+            ]
 # problem = '1_sum_of_numbers'
 ###############
 

@@ -1,0 +1,8 @@
+int* solve_student(int* arr, int n) { // student 9 - incorrect
+    for(int i = 0; i < n - 1; i++){
+        if(arr[i] > arr[i+1]){
+            return arr;
+        }
+    }
+    return arr;
+}

@@ -1,1 +1,14 @@
-int solve_student(const char s[], int n) { bool isPalindrome = true; for (int i = 0; i < n / 2; i++) { if (s[i] != s[n - i - 1]) { isPalindrome = false; break; } } if (isPalindrome) return 1; else return 0; }
+#include <stdio.h>
+
+
+
+int solve_student(char *str, int length) {
+    int i = 0;
+    while (i < length / 2) {
+        if (str[i] != str[length - 1 - i]) {
+            return 0;
+        }
+        i++;
+    }
+    return 1;
+}

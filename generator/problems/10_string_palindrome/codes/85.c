@@ -1,9 +1,1 @@
-int solve_student(const char s[], int n) {
-  if (n <= 1) return 1;
-  for (int i = 0; i < n / 2; i++) {
-    if (s[i] != s[n - 1 - i]) {
-      return 0;
-    }
-  }
-  return 1;
-}
+int solve_student(char *str, int n) { for (int i = 0; i < n; i++) { if (str[i] != str[n - i - 1]) return 0; } return 1; }

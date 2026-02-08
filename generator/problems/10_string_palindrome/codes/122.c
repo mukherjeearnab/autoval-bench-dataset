@@ -1,9 +1,9 @@
-int solve_student(const char s[], int n) {
+int solve_student(char* str, int length) {
   int left = 0;
-  int right = n - 1;
+  int right = length - 1;
 
   while (left < right) {
-    if (s[left] != s[right]) {
+    if (str[left] != str[right]) {
       return 0;
     }
     left++;

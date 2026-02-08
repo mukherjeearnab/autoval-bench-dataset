@@ -1,8 +1,5 @@
-int solve_student(const char s[], int n) {
-  int i;
-  for (i = 0; i < n; i++) {
-    if (s[i] != s[n - i - 1])
-        return 0;
-  }
-  return 1;
-}
+#include <string.h>
+
+
+
+int solve_student(char* s, int len) { char rev[101]; int i; for(i = 0; i < len; i++) rev[i] = s[len - 1 - i]; if (strcmp(s, rev) == 0) return 1; else return 0; }

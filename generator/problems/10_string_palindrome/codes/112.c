@@ -1,13 +1,5 @@
-int solve_student(const char s[], int n) {
-  int left = 0;
-  int right = n - 1;
+#include <string.h>
 
-  while (left < right) {
-    if (s[left] != s[right]) {
-      return 0;
-    }
-    left++;
-    right--;
-  }
-  return 1;
-}
+
+
+int solve_student(char* s, int len) { int left = 0; int right = len - 1; while (left < right) { if (s[left] != s[right]) { return 0; } left++; right--; } return 1; }

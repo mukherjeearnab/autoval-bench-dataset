@@ -1,5 +1,1 @@
-#include <string.h>
-
-
-
-int solve_student(const char s[], int n) { int i; for(i = 0; i < n/2; i++){ if(s[i] != s[n-1-i]) return 0;} return 1; }
+int solve_student(char* str, int length) { int left = 0; int right = length - 1; while (left < right) { if (str[left] != str[right]) { return 0; } left++; right--; } return 1; }

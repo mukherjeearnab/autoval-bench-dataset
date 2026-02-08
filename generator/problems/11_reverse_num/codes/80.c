@@ -1,0 +1,1 @@
+int solve_student(int num) { int rev = 0; int i = 0; while(i < num) { rev = rev * 10 + num % 10; num = num / 10; i++; } return rev; }

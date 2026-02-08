@@ -1,10 +1,1 @@
-int solve_student(const char s[], int n) {
-    int isPalindrome = 1;
-    for (int i = 0; i < n / 2; i++) {
-        if (s[i] != s[n - 1 - i]) {
-            isPalindrome = 0;
-            break;
-        }
-    }
-    return isPalindrome;
-}
+int solve_student(char* s, int len) { int i; for(i = 0; i < len; i++){ if(s[i] != s[len - i - 1]) return 0; } return 1; }

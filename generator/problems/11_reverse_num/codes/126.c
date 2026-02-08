@@ -1,0 +1,1 @@
+int solve_student(int num) {  int reversedNumber = 0;  int temp = num;  while (temp > 0) {   int lastDigit = temp % 10;   reversedNumber = reversedNumber * 10 + lastDigit;   temp /= 10;  }  return reversedNumber; }

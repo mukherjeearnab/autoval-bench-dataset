@@ -1,15 +1,1 @@
-#include <stdio.h>
-
-
-
-int solve_student(const char s[], int n) {
-  int i, j;
-  j = n;
-  for (i = 0; i < n; i++) {
-    if (s[i] != s[j - 1]) {
-      return 0;
-    }
-    j--;
-  }
-  return 1;
-}
+int solve_student(char* str, int len) {  if (len <= 1) return 1;  if (str[0] != str[len - 1]) { return 0; }  char *sub = str + 1;  int sub_len = len - 2;  return solve_student(sub, sub_len); }

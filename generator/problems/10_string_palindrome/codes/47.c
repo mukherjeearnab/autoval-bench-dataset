@@ -1,1 +1,11 @@
-int solve_student(const char s[], int n) { char reversed[101]; int i; for(i = 0; i < n; i++) { reversed[i] = s[n-i-1]; } for (i = 0; i < n; i++) { if (s[i] != reversed[i]) { return 0; } } return 1; }
+#include <string.h>
+
+
+
+int solve_student(char s[], int len) {
+    int i;
+    for (i = 0; i < len / 2; i++) {
+        if (s[i] != s[len - 1 - i]) return 0;
+    }
+    return 1;
+}
