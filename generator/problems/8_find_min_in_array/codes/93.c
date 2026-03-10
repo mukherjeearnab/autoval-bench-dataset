@@ -1,4 +1,4 @@
-/* Student 3 */
+
 #include <stdio.h>
 
 int find_min(int a, int b) {
