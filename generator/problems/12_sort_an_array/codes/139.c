@@ -1,4 +1,4 @@
-int* solve_student(int* arr, int n) { // Student 9: Correct - Insertion sort
+int* solve_student(int* arr, int n) { 
  int i, key, j;
  for (i = 1; i < n; i++) {
   key = arr[i];

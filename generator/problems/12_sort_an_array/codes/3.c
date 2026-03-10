@@ -1,5 +1,5 @@
 int* solve_student(int* arr, int n) {
-    // Insertion sort implementation
+    
     int i, key, j;
     for (i = 1; i < n; i++) {
         key = arr[i];

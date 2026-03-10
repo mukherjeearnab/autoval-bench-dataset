@@ -1,4 +1,4 @@
-int* solve_student(int* arr, int n) { // Student 2: Selection Sort
+int* solve_student(int* arr, int n) { 
   int i, j, min_idx, temp;
   for (i = 0; i < n; i++) {
     min_idx = i;

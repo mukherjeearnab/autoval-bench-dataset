@@ -1,4 +1,4 @@
-int* solve_student(int* arr, int n) { // Student 7: Correct - Heap Sort
+int* solve_student(int* arr, int n) { 
   void heapify(int* arr, int n, int i) {
     int largest = i;
     int l = 2 * i + 1;

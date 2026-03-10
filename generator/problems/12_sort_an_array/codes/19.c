@@ -1,4 +1,4 @@
-int* solve_student(int* arr, int n) { // Student 9: Incorrect - infinite loop
+int* solve_student(int* arr, int n) { 
   int i, j, temp;
   i = 0; j = 0;
   while(i < n) {

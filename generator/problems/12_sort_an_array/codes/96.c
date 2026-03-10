@@ -16,7 +16,7 @@ void heapify(int* arr, int n, int i) {
   }
 }
 
-int* solve_student(int* arr, int n) { // Student 6: Correct - Heap Sort
+int* solve_student(int* arr, int n) { 
   int i, j, temp;
   for (i = n / 2 - 1; i >= 0; i--) {
     heapify(arr, n, i);

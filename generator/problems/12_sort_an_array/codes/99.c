@@ -1,4 +1,4 @@
-int* solve_student(int* arr, int n) { // Student 9: Incorrect - Compilation Error
+int* solve_student(int* arr, int n) { 
   int i, temp;
   for (i = 0; i < n - 1; i++) 
     if (arr[i] > arr[i + 1]){

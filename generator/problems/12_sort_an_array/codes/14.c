@@ -1,4 +1,4 @@
-int* solve_student(int* arr, int n) { // Student 4: QuickSort
+int* solve_student(int* arr, int n) { 
   if (n < 2) return arr;
   int pivot = arr[0];
   int i = -1;
@@ -14,7 +14,7 @@ int* solve_student(int* arr, int n) { // Student 4: QuickSort
   arr[i + 1] = arr[0];
   arr[0] = temp;
 
-  solve_student(arr, i); // recursive call
+  solve_student(arr, i); 
   solve_student(arr + i + 1, n - i - 1);
 
   return arr;

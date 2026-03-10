@@ -1,5 +1,5 @@
 int* solve_student(int* arr, int n) {
-  // QuickSort
+  
   if (n <= 1) return arr;
 
   int pivot = arr[0];

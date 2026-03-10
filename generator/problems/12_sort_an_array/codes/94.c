@@ -1,4 +1,4 @@
-int* solve_student(int* arr, int n) { // Student 4: Quick Sort
+int* solve_student(int* arr, int n) { 
   if (n <= 1) return arr;
   int pivot = arr[0];
   int i = 0, j = n - 1;

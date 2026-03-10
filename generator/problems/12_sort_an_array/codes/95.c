@@ -1,4 +1,4 @@
-int* solve_student(int* arr, int n) { // Student 5: Correct - Merge Sort (recursive)
+int* solve_student(int* arr, int n) { 
   if (n <= 1) return arr;
   int mid = n / 2;
   int* left = (int*)malloc(mid * sizeof(int));

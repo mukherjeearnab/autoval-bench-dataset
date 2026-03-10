@@ -1,4 +1,4 @@
-int* solve_student(int* arr, int n) { //student 10 - Incorrect
+int* solve_student(int* arr, int n) { 
   int i, j, temp;
   for (i = 0; i < n; i++){
     for(j = i; j < n; j++){

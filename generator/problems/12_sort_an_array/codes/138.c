@@ -1,4 +1,4 @@
-int* solve_student(int* arr, int n) { // Student 8: Incorrect - missing include, wrong logic
+int* solve_student(int* arr, int n) { 
  #include <stdio.h>
  int i,j,temp;
  for (i=0; i<n; i++){

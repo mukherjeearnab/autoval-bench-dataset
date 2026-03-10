@@ -1,4 +1,4 @@
-int* solve_student(int* arr, int n) { // Student 7 - Merge Sort (implementation omitted for brevity)
+int* solve_student(int* arr, int n) { 
     if (n <= 1) {
         return arr;
     }

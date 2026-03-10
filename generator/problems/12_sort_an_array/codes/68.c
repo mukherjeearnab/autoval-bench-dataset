@@ -1,4 +1,4 @@
-int* solve_student(int* arr, int n) { // student 8 - incorrect
+int* solve_student(int* arr, int n) { 
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++){
             if(arr[i] < arr[j]){

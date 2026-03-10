@@ -1,4 +1,4 @@
-int* solve_student(int* arr, int n) { // Student 4: Quick Sort (Recursive)
+int* solve_student(int* arr, int n) { 
   void quicksort(int* arr, int low, int high) {
     if (low < high) {
       int pivot = arr[high];

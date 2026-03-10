@@ -1,4 +1,4 @@
-int* solve_student(int* arr, int n) { // student 9 - Incorrect: missing include, wrong loop condition
+int* solve_student(int* arr, int n) { 
     int i, j, temp;
     for (i = 0; i < n; i++){
         for(j = 0; j < n; j++){

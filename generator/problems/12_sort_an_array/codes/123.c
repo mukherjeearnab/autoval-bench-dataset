@@ -6,7 +6,7 @@ int* solve_student(int* arr, int n) {
       arr[i] = arr[n-1-i];
       arr[n-1-i] = temp;
     }
-    //Selection sort
+    
     for (int i = 0; i < n - 1; i++) {
         int min_idx = i;
         for (int j = i + 1; j < n; j++) {

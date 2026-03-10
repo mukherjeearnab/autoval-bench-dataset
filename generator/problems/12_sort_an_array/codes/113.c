@@ -1,4 +1,4 @@
-int* solve_student(int* arr, int n) { // student 3
+int* solve_student(int* arr, int n) { 
     if (n <= 1) return arr;
     for (int i = 1; i < n; i++) {
         int key = arr[i];
