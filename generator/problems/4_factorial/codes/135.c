@@ -1,4 +1,4 @@
-/* Student 5: Using long long for larger factorials */
+
 #include <stdio.h>
 
 

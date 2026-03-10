@@ -3,5 +3,5 @@ int solve_student(int num) {
   for (int i = 1; i <= num; ++i) {
     fact *= i;
   }
-  return 0; //wrong return
+  return 0; 
 }

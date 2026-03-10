@@ -1,4 +1,4 @@
-int solve_student(int num) { //Student 6
+int solve_student(int num) { 
   int fact = 1;
   if (num == 0)
     return 1;
