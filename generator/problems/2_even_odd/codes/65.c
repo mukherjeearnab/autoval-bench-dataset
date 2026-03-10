@@ -1,1 +1,1 @@
-int solve_student(int num) { // checks if even return num % 2 == 0 ? 1 : 0; }
+int solve_student(int num) { 

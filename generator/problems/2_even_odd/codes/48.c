@@ -1,5 +1,5 @@
 int solve_student(int num) {
-  // check if number is even
+  
   int rem = num % 2;
   if (rem == 0) return 1;
   else

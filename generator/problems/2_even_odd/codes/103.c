@@ -2,7 +2,7 @@
 
 
 
-int solve_student(int num) {  //checks if the number is even or odd
+int solve_student(int num) {  
     if (num % 2 == 0) {
         return 1;
     } else {
