@@ -1,4 +1,4 @@
-int* solve_student(int* arr, int n) { // Student 2: Using a helper function
+int* solve_student(int* arr, int n) { 
     void swap(int* a, int* b) {
         int temp = *a;
         *a = *b;

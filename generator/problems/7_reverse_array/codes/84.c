@@ -1,4 +1,4 @@
-int* solve_student(int* arr, int n) { // Student 4: Incorrect - off by one
+int* solve_student(int* arr, int n) { 
     int i;
     for (i = 0; i < n; i++) {
         int temp = arr[0];

@@ -1,4 +1,4 @@
-int* solve_student(int* arr, int n) { // Student 1 - Clean and clear
+int* solve_student(int* arr, int n) { 
     int start = 0;
     int end = n - 1;
     while (start < end) {

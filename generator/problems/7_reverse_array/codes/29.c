@@ -1,4 +1,4 @@
-int* solve_student(int* arr, int n) { // Student 9 - Slightly verbose
+int* solve_student(int* arr, int n) { 
  int start_index = 0;
  int end_index = n - 1;
 

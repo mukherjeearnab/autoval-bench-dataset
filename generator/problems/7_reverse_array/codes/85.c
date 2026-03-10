@@ -1,4 +1,4 @@
-int* solve_student(int* arr, int n) { // Student 5: Using recursion
+int* solve_student(int* arr, int n) { 
     void reverse_recursive(int* arr, int start, int end) {
         if (start >= end) return;
         int temp = arr[start];

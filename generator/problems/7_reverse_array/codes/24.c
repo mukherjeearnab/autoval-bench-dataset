@@ -1,4 +1,4 @@
-int* solve_student(int* arr, int n) { // Student 4 - Slightly different style
+int* solve_student(int* arr, int n) { 
     int left = 0;
     int right = n - 1;
 

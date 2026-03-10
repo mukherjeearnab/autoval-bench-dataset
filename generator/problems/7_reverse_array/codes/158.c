@@ -1,6 +1,6 @@
-int* solve_student(int* arr, int n) { // Student 8: Incorrect - missing include and returns wrong type
+int* solve_student(int* arr, int n) { 
   for (int i = 0; i < n; i++) {
-    arr[i] = arr[i]; //Does nothing
+    arr[i] = arr[i]; 
   }
-  return 0; // Wrong return type
+  return 0; 
 }

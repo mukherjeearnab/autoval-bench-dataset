@@ -1,5 +1,5 @@
-int* solve_student(int* arr, int n) { // Student 10 - Syntax error: missing return type in swap function
- void swap(int* a, int* b) {   //Missing return type
+int* solve_student(int* arr, int n) { 
+ void swap(int* a, int* b) {   
  int temp = *a;
  *a = *b;
  *b = temp;

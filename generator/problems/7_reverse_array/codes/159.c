@@ -1,4 +1,4 @@
-int* solve_student(int* arr, int n) { // Student 9: Correct, using a do-while loop
+int* solve_student(int* arr, int n) { 
  int start = 0;
  int end = n - 1;
  do {

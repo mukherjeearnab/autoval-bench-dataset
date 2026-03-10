@@ -1,4 +1,4 @@
-int* solve_student(int* arr, int n) { // Student 6 - Incorrect: missing header
+int* solve_student(int* arr, int n) { 
  int i, temp;
  for(i=0; i<n/2; i++){
  temp = arr[i];
