@@ -1,8 +1,3 @@
-
-
-
-
-Student attempt at reversing an integer
 int solve_student(int num) {
   int rev = 0;
   int sign = 1;
