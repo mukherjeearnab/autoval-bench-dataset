@@ -1,4 +1,4 @@
-int solve_student(int num) { //student 1
+int solve_student(int num) { 
     int reversed_num = 0;
     while (num != 0) {
         int digit = num % 10;

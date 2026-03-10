@@ -1,4 +1,4 @@
-int solve_student(int num) { //student 8 - incorrect
+int solve_student(int num) { 
     int reversed_num = 0;
     int temp = num;
     while(temp > 0){

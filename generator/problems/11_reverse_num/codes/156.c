@@ -1,4 +1,4 @@
-int solve_student(int num) { //student 2
+int solve_student(int num) { 
     int rev = 0;
     int sign = 1;
 
