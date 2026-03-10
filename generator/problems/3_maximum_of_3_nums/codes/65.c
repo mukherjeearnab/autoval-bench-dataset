@@ -1,5 +1,5 @@
 int solve_student(int a, int b, int c) {
-    // Find the largest of three integers
+    
     int result;
     if (a > b && a > c) {
         result = a;

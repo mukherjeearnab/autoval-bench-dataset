@@ -3,6 +3,6 @@ int solve_student(int a, int b, int c) {
  if (a > b && a > c)
   max = a;
  else
-  max = b;  //incorrect. should check c too
+  max = b;  
  return max;
 }

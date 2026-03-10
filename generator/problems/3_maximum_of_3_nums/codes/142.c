@@ -1,4 +1,4 @@
-/* Student submission */
+
 #include <stdio.h>
 
 
