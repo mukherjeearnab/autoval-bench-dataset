@@ -1,8 +1,4 @@
 
-
-
-
-Student Submission
 int solve_student(int num) {
   int rev = 0;
   while(num > 0) {
