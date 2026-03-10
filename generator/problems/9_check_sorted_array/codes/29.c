@@ -1,4 +1,4 @@
-int solve_student(int* arr, int n) { //incorrect: missing include, wrong return 
+int solve_student(int* arr, int n) { 
     int i; 
     for (i = 0; i < n; i++) {
         if(arr[i] > arr[i+1])
