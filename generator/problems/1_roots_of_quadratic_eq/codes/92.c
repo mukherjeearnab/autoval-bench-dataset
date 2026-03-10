@@ -1,4 +1,4 @@
-//Student 2
+
 #include <stdio.h>
 
 
